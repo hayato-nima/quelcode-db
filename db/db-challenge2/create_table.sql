@@ -13,16 +13,6 @@ CREATE TABLE `users` (
       PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
--- 入室記録
-CREATE TABLE `entry_records` (
-      `user_id` int(11) NOT NULL,
-      `room_id` int(11) NOT NULL,
-      `entered_at` datetime NOT NULL,
-      PRIMARY KEY (`user_id`,`room_id`),
-      FOREIGN KEY(`user_id`) REFERENCES `users`(`id`),
-      FOREIGN KEY(`room_id`) REFERENCES `rooms`(`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
-
 -- チャットルーム
 CREATE TABLE `rooms` (
       `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -72,4 +62,14 @@ CREATE TABLE `tasks` (
       REFERENCES `rooms`(`id`) -- roomsテーブル.id
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
+
+-- 入室記録
+CREATE TABLE `entry_records` (
+      `user_id` int(11) NOT NULL,
+      `room_id` int(11) NOT NULL,
+      `entered_at` datetime NOT NULL,
+      PRIMARY KEY (`user_id`,`room_id`),
+      FOREIGN KEY(`user_id`) REFERENCES `users`(`id`),
+      FOREIGN KEY(`room_id`) REFERENCES `rooms`(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
