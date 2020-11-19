@@ -77,3 +77,4 @@ INSERT INTO `users`(
   ) VALUES (
   'amazon','microsoft@gmail.com','google','facebook','080-9999-5555',1,'2020-04-24 06:00:02','2020-04-26 12:13:43'
   );
+  
