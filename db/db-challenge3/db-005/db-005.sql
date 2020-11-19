@@ -2,7 +2,7 @@
 -- 空項目はNULLとする
 
 INSERT INTO `tasks`(
-   `room_id`, `content`, `undertaked_user_id`, `deadline_at`, `is_completed_task`, `is_deleted`, `created_at`, `create_user_id`, `updated_at`, `update_user_id`
+  `room_id`, `content`, `undertaked_user_id`, `deadline_at`, `is_completed_task`, `is_deleted`, `created_at`, `create_user_id`, `updated_at`, `update_user_id`
   ) 
   VALUES 
   (1,'利用規約をアップロードする',1,'2020-04-21 14:00:00',1,0,'2020-04-21 11:30:55',1,'2020-04-21 13:13:20',1),

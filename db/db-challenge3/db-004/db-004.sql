@@ -2,7 +2,7 @@
 -- 空項目はNULLとする
 
 INSERT INTO `messages`(
-  `room_id`, `message`, `file_name`, `is_deleted`, `posted_at`, `post_user_id`, `updated_at`, `update_user_id`
+`room_id`, `message`, `file_name`, `is_deleted`, `posted_at`, `post_user_id`, `updated_at`, `update_user_id`
 ) 
 VALUES 
 (1,'このチャットの注意事項を添付しました。確認してください。','注意事項.pdf',0,'2020-04-21 13:11:55',1,'2020-04-21 13:11:55',1),
