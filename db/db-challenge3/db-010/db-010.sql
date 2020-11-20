@@ -12,8 +12,8 @@ FROM
 (SELECT * FROM `messages` WHERE is_deleted=0) AS 削除済MS
 JOIN 
 (SELECT * FROM `users` WHERE is_deleted=0) AS 削除済US
-on 削除済MS.update_user_id = 削除済US.id
+ON 削除済MS.update_user_id = 削除済US.id
 JOIN 
 (SELECT * FROM `rooms` WHERE is_deleted=0) AS 削除済RM
-on 削除済MS.room_id = 削除済RM.id
+ON 削除済MS.room_id = 削除済RM.id
 ORDER BY 削除済RM.id ASC
