@@ -14,3 +14,4 @@ END AS ファイル送信許可,
 FROM rooms 
 WHERE (is_deleted<>1) AND (summary LIKE '%ダイレクトチャット')
 ORDER BY rooms.id ASC;
+
