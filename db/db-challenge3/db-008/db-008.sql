@@ -5,9 +5,7 @@
 -- ・削除されているユーザー、削除されているチャットルームは表示しないこと
 -- ・参加日時の昇順で表示
 
-SELECT  users.screen_name   AS ユーザー名
-       ,rooms.name          AS チャットルーム名
-       ,LEFT(entered_at,10) AS 参加日時
+SELECT  users.screen_name AS ユーザー名,  rooms.name AS チャットルーム名,LEFT(entered_at,10) AS 参加日時
 FROM entry_records
 JOIN users
 on entry_records.user_id = users.id

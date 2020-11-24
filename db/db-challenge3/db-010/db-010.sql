@@ -5,15 +5,11 @@
 -- ・削除されているユーザーの投稿、削除されている投稿は含まないこと
 -- ・チャットルームidの昇順で表示
 
-SELECT  削除済US.screen_name AS ユーザー名
-       ,削除済MS.updated_at  AS 投稿日時 
-       ,削除済RM.name        AS チャットルーム名
-FROM 
-(
-	SELECT  *
-	FROM `messages`
-	WHERE is_deleted=0 
-) AS 削除済MS
+SELECT 
+削除済US.screen_name AS ユーザー名,
+削除済MS.updated_at AS 投稿日時 , 削除済RM.name AS チャットルーム名
+FROM  
+(SELECT * FROM `messages` WHERE is_deleted=0) AS 削除済MS
 JOIN 
 (SELECT * FROM `users` WHERE is_deleted=0) AS 削除済US
 on 削除済MS.update_user_id = 削除済US.id
